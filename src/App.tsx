@@ -1,6 +1,10 @@
 import { Cell, type CellState } from './components/Cell/Cell'
 
-interface Variant { state: CellState; preview?: boolean; label: string }
+interface Variant {
+  state: CellState
+  preview?: boolean
+  label: string
+}
 
 const VARIANTS: Variant[] = [
   { state: 'empty', label: 'empty' },
