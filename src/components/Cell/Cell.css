@@ -1,0 +1,39 @@
+:root {
+  --color-player1: #e53e3e;
+  --color-player2: #ecc94b;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell__disc {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  transition: background-color 0.15s ease;
+}
+
+.cell__disc--empty {
+  background-color: var(--bg);
+}
+
+.cell__disc--player1 {
+  background-color: var(--color-player1);
+}
+
+.cell__disc--player2 {
+  background-color: var(--color-player2);
+}
+
+.cell__disc--player1.cell__disc--preview {
+  background-color: color-mix(in srgb, var(--color-player1) 50%, var(--bg));
+}
+
+.cell__disc--player2.cell__disc--preview {
+  background-color: color-mix(in srgb, var(--color-player2) 50%, var(--bg));
+}
